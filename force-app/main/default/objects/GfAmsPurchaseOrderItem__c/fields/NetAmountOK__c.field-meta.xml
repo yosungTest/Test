@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NetAmountOK__c</fullName>
+    <formula>IF(OR(ISBLANK(NetPrice__c) , ISBLANK(QuantityConfirm__c)),
+    NetAmount__c,
+    (NetPrice__c * QuantityConfirm__c)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Net Amount OK</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

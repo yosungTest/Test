@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <label>Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>At Dealer Location</fullName>
+                <default>false</default>
+                <label>At Dealer Location</label>
+            </value>
+            <value>
+                <fullName>In Service</fullName>
+                <default>false</default>
+                <label>In Service</label>
+            </value>
+            <value>
+                <fullName>In Repair</fullName>
+                <default>false</default>
+                <label>In Repair</label>
+            </value>
+            <value>
+                <fullName>In Manufacturing</fullName>
+                <default>false</default>
+                <label>In Manufacturing</label>
+            </value>
+            <value>
+                <fullName>Sold to Customer</fullName>
+                <default>false</default>
+                <label>Sold to Customer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

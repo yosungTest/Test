@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EventType__c</fullName>
+    <label>Event Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Regular</fullName>
+                <default>false</default>
+                <label>정기행사</label>
+            </value>
+            <value>
+                <fullName>NewProduct</fullName>
+                <default>false</default>
+                <label>신제품행사</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>기타</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

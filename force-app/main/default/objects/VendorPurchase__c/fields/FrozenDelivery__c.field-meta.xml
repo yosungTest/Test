@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FrozenDelivery__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>냉동배송이 불가한 매입처는 체크해제, 판매점의 냉동배송여부도 함께 봐야함.</description>
+    <label>Frozen Delivery</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

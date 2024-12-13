@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NetAmountOK__c</fullName>
+    <description>발주 확정 금액 합계</description>
+    <label>Net Amount OK</label>
+    <summarizedField>GfAmsPurchaseOrderItem__c.NetAmountOK__c</summarizedField>
+    <summaryForeignKey>GfAmsPurchaseOrderItem__c.PurchaseOrder__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ConfirmWarehouseIn__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>본사 사용자</description>
+    <label>Confirm Warehouse In</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>WarehouseIn1</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

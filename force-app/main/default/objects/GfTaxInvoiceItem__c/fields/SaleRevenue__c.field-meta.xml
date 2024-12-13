@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SaleRevenue__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Sales Revenue</label>
+    <referenceTo>SalesRevenue__c</referenceTo>
+    <relationshipLabel>Tax Invoice Items</relationshipLabel>
+    <relationshipName>Tax_Invoice_Items</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

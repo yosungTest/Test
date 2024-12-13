@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RejectReason__c</fullName>
+    <label>Reject Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>손상됨</fullName>
+                <default>false</default>
+                <label>손상됨</label>
+            </value>
+            <value>
+                <fullName>판매완료</fullName>
+                <default>false</default>
+                <label>판매완료</label>
+            </value>
+            <value>
+                <fullName>포장 상품 부족</fullName>
+                <default>false</default>
+                <label>포장 상품 부족</label>
+            </value>
+            <value>
+                <fullName>재고 부족</fullName>
+                <default>false</default>
+                <label>재고 부족</label>
+            </value>
+            <value>
+                <fullName>기타</fullName>
+                <default>false</default>
+                <label>기타</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

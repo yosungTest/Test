@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ConfirmNetAmount__c</fullName>
+    <label>Confirm Net Amount</label>
+    <summarizedField>InventoryOutOrderLineItem__c.ConfirmNetAmount__c</summarizedField>
+    <summaryForeignKey>InventoryOutOrderLineItem__c.InventoryOutOrder__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

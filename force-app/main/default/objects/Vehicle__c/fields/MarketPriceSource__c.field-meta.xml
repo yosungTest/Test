@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MarketPriceSource__c</fullName>
+    <label>Market Price Source</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CarCheck</fullName>
+                <default>false</default>
+                <label>CarCheck</label>
+            </value>
+            <value>
+                <fullName>Autocar</fullName>
+                <default>false</default>
+                <label>Autocar</label>
+            </value>
+            <value>
+                <fullName>CareArena</fullName>
+                <default>false</default>
+                <label>CareArena</label>
+            </value>
+            <value>
+                <fullName>Zigwheels</fullName>
+                <default>false</default>
+                <label>Zigwheels</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

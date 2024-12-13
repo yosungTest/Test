@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PartnerType__c</fullName>
+    <description>이 값에 따라 권한이 다름</description>
+    <label>Partner Type</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Direct</fullName>
+                <default>false</default>
+                <label>직영</label>
+            </value>
+            <value>
+                <fullName>Compound</fullName>
+                <default>false</default>
+                <label>복합</label>
+            </value>
+            <value>
+                <fullName>Consignment</fullName>
+                <default>false</default>
+                <label>위탁</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

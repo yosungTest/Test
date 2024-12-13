@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <label>Receipt Place</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>창고</fullName>
+                <default>false</default>
+                <label>창고</label>
+            </value>
+            <value>
+                <fullName>리테일 매장</fullName>
+                <default>false</default>
+                <label>리테일 매장</label>
+            </value>
+            <value>
+                <fullName>매장 수령</fullName>
+                <default>false</default>
+                <label>매장 수령</label>
+            </value>
+            <value>
+                <fullName>공급자</fullName>
+                <default>false</default>
+                <label>공급자</label>
+            </value>
+            <value>
+                <fullName>다운로드</fullName>
+                <default>false</default>
+                <label>다운로드</label>
+            </value>
+            <value>
+                <fullName>이메일</fullName>
+                <default>false</default>
+                <label>이메일</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

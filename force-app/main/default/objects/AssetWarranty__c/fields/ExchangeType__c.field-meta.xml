@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ExchangeType__c</fullName>
+    <label>Exchange Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>a pre-exchange</fullName>
+                <default>false</default>
+                <label>a pre-exchange</label>
+            </value>
+            <value>
+                <fullName>a rental item</fullName>
+                <default>false</default>
+                <label>a rental item</label>
+            </value>
+            <value>
+                <fullName>a return exchange</fullName>
+                <default>false</default>
+                <label>a return exchange</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Registor__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>출고등록한 대리점 직원</description>
+    <label>Registor</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Release</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

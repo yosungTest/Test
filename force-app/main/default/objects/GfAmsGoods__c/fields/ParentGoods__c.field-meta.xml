@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ParentGoods__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>대표상품</description>
+    <label>Parent Goods</label>
+    <referenceTo>GfAmsGoods__c</referenceTo>
+    <relationshipName>Goods</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

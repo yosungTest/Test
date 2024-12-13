@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CurrentOwnerId__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Current Owner</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Vehicle</relationshipLabel>
+    <relationshipName>Vehicle</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

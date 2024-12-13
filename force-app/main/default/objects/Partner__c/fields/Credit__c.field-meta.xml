@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit__c</fullName>
+    <label>Credit</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Blocker</fullName>
+                <default>true</default>
+                <label>발주막기</label>
+            </value>
+            <value>
+                <fullName>Always</fullName>
+                <default>false</default>
+                <label>항상가능</label>
+            </value>
+            <value>
+                <fullName>Temporarily</fullName>
+                <default>false</default>
+                <label>일시가능</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

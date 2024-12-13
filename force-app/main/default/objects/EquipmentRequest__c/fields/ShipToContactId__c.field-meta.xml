@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ShipToContactId__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Ship To Contact ID</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Equipment Request (Ship To Contact ID)</relationshipLabel>
+    <relationshipName>Equipment_Request1</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

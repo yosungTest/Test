@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AccountID__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>기본값 : &quot;대리점관리시스템&quot; 값만 넣도록(디폴트), 차후에 Account참조해서 시스템정보 알아낼때 사용</description>
+    <label>Account ID</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Partner</relationshipLabel>
+    <relationshipName>Partner</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

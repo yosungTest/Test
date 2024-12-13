@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Lightning 앱 빌더에서 생성됨</description>
+    <flexiPage>TabSideMenuConfig10</flexiPage>
+    <label>매출 및 비용</label>
+    <motif>Custom12: Circle</motif>
+</CustomTab>

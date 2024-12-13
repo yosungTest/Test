@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RootEquipmentAssetId__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Root Equipment Asset ID</label>
+    <referenceTo>EquipmentAsset__c</referenceTo>
+    <relationshipLabel>Equipment Asset (Root Equipment Asset ID)</relationshipLabel>
+    <relationshipName>Equipment_Asset1</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

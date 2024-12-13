@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AdjustmentType__c</fullName>
+    <label>Adjustment Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FixedAmountOffLineItemTotal</fullName>
+                <default>false</default>
+                <label>FixedAmountOffLineItemTotal</label>
+            </value>
+            <value>
+                <fullName>FixedAmountOffTransaction</fullName>
+                <default>false</default>
+                <label>FixedAmountOffTransaction</label>
+            </value>
+            <value>
+                <fullName>FixedAmountOffUnitPrice</fullName>
+                <default>false</default>
+                <label>FixedAmountOffUnitPrice</label>
+            </value>
+            <value>
+                <fullName>FixedPrice</fullName>
+                <default>false</default>
+                <label>FixedPrice</label>
+            </value>
+            <value>
+                <fullName>PercentageDiscount</fullName>
+                <default>false</default>
+                <label>PercentageDiscount</label>
+            </value>
+            <value>
+                <fullName>TotalFixedPrice</fullName>
+                <default>false</default>
+                <label>TotalFixedPrice</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
