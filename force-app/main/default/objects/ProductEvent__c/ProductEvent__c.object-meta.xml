@@ -154,6 +154,7 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <label>품목별 행사정보</label>
+    <pluralLabel>Product Events</pluralLabel>
     <nameField>
         <label>Event Name</label>
         <type>Text</type>

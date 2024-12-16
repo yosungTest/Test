@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InventoryOutOrderStatus__c</fullName>
+    <label>Inventory Out Order Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Released</fullName>
+                <default>true</default>
+                <label>미출고</label>
+            </value>
+            <value>
+                <fullName>Released</fullName>
+                <default>false</default>
+                <label>출고</label>
+            </value>
+            <value>
+                <fullName>Partial Released</fullName>
+                <default>false</default>
+                <label>부분출고</label>
+            </value>
+            <value>
+                <fullName>Cancel Released</fullName>
+                <default>false</default>
+                <label>출고취소</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>EA</fullName>
+        <default>false</default>
+        <label>EA</label>
+    </customValue>
+    <customValue>
+        <fullName>Kg</fullName>
+        <default>false</default>
+        <label>Kg</label>
+    </customValue>
+    <customValue>
+        <fullName>Meter</fullName>
+        <default>false</default>
+        <label>Meter</label>
+    </customValue>
+    <customValue>
+        <fullName>Liter</fullName>
+        <default>false</default>
+        <label>Liter</label>
+    </customValue>
+    <description>단위</description>
+    <masterLabel>Unit</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

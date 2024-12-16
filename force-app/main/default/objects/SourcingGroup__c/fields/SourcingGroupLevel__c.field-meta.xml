@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SourcingGroupLevel__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Sourcing Group Level</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>GroupLevel1</fullName>
+                <default>false</default>
+                <label>1: Group Level 1</label>
+            </value>
+            <value>
+                <fullName>GroupLevel2</fullName>
+                <default>false</default>
+                <label>2: Group Level 2</label>
+            </value>
+            <value>
+                <fullName>GroupLevel3</fullName>
+                <default>false</default>
+                <label>3: Group Level 3</label>
+            </value>
+            <value>
+                <fullName>GroupLevel4</fullName>
+                <default>false</default>
+                <label>4: Group Level 4</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

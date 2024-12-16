@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SourcingGroupLevel2__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <label>Sourcing Group Level2</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>SourcingGroup__c.SourcingGroupLevel__c</field>
+            <operation>equals</operation>
+            <value>GroupLevel2</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>SourcingGroup__c</referenceTo>
+    <relationshipName>ProductwaFf</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

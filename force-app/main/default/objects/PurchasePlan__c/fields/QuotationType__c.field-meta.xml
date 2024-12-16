@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QuotationType__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Quotation Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Nomination</fullName>
+                <default>false</default>
+                <label>Nomination</label>
+            </value>
+            <value>
+                <fullName>NegotiateContract</fullName>
+                <default>false</default>
+                <label>Negotiate Contract</label>
+            </value>
+            <value>
+                <fullName>CompetitiveBidding</fullName>
+                <default>false</default>
+                <label>Competitive Bidding</label>
+            </value>
+            <value>
+                <fullName>ExclusiveBidding</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Exclusive Bidding</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

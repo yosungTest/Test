@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SourcingGroupCompactLayout</fullName>
+    <fields>Name</fields>
+    <fields>SGCode__c</fields>
+    <fields>PurchaseType__c</fields>
+    <fields>PurchasePeriod__c</fields>
+    <label>SourcingGroupCompactLayout</label>
+</CompactLayout>

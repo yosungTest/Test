@@ -154,6 +154,7 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <label>대리점입고상세</label>
+    <pluralLabel>Warehouse In Line Items</pluralLabel>
     <nameField>
         <displayFormat>{00000000}</displayFormat>
         <label>Name</label>

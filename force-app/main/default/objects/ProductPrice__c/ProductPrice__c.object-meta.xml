@@ -154,6 +154,7 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <label>품목별 약정가</label>
+    <pluralLabel>Product Prices</pluralLabel>
     <nameField>
         <displayFormat>{00000000}</displayFormat>
         <label>Name</label>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>General</fullName>
+        <default>false</default>
+        <label>일반배송</label>
+    </customValue>
+    <customValue>
+        <fullName>Fast</fullName>
+        <default>false</default>
+        <label>긴급배송</label>
+    </customValue>
+    <customValue>
+        <fullName>Direct</fullName>
+        <default>false</default>
+        <label>직접수령</label>
+    </customValue>
+    <description>발주 유형   [GfAmsPurchaseOrder__c]</description>
+    <masterLabel>Purchase Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

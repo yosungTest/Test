@@ -154,6 +154,7 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <label>Credit</label>
+    <pluralLabel>Credits</pluralLabel>
     <nameField>
         <displayFormat>CD{YYYYMMDD}{00000}</displayFormat>
         <label>Credit Number</label>

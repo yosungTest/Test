@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Hiydrogel</fullName>
+        <default>false</default>
+        <label>Hiydrogel</label>
+    </customValue>
+    <customValue>
+        <fullName>Silicon</fullName>
+        <default>false</default>
+        <label>Silicon</label>
+    </customValue>
+    <masterLabel>SkuOption3</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -154,6 +154,7 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <label>본사반품상세</label>
+    <pluralLabel>Return Line Items</pluralLabel>
     <nameField>
         <displayFormat>{0000000000}</displayFormat>
         <label>Name</label>

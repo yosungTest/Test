@@ -154,6 +154,7 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <label>본사출고</label>
+    <pluralLabel>Inventory Out Orders</pluralLabel>
     <nameField>
         <label>Inventory Out Order No</label>
         <type>Text</type>

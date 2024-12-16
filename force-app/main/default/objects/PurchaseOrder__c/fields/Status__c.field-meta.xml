@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Status</description>
+    <label>Status</label>
+    <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Registration</fullName>
+                <default>true</default>
+                <label>등록</label>
+            </value>
+            <value>
+                <fullName>Determined</fullName>
+                <default>false</default>
+                <label>확정</label>
+            </value>
+            <value>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+                <label>취소</label>
+            </value>
+            <value>
+                <fullName>ChangeComplete</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Change Complete</label>
+            </value>
+            <value>
+                <fullName>ChangeRequest</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Change Request</label>
+            </value>
+            <value>
+                <fullName>Completion</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Completion</label>
+            </value>
+            <value>
+                <fullName>Draft</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Draft</label>
+            </value>
+            <value>
+                <fullName>OrderReception</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Order Reception</label>
+            </value>
+            <value>
+                <fullName>PaymentApprovalWait</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Payment Approval Wait</label>
+            </value>
+            <value>
+                <fullName>Payment Completed</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Payment Completed</label>
+            </value>
+            <value>
+                <fullName>PaymentPartiallyCompleted</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Payment Partially Completed</label>
+            </value>
+            <value>
+                <fullName>PaymentCompleted</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>PaymentCompleted</label>
+            </value>
+            <value>
+                <fullName>PlaceOrder</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Place Order</label>
+            </value>
+            <value>
+                <fullName>Reviewed</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Reviewed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

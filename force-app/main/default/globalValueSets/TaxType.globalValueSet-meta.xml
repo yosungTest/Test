@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Tax</fullName>
+        <default>true</default>
+        <label>과세</label>
+    </customValue>
+    <customValue>
+        <fullName>TaxFree</fullName>
+        <default>false</default>
+        <label>면세</label>
+    </customValue>
+    <description>세금 구분 [GfAmsGoods__c]</description>
+    <masterLabel>Tax Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

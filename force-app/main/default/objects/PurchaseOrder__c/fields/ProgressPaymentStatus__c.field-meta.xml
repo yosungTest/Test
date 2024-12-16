@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProgressPaymentStatus__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Progress Payment Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PaymentApprovalWait</fullName>
+                <default>true</default>
+                <label>PaymentApprovalWait</label>
+            </value>
+            <value>
+                <fullName>PaymentPartiallyCompleted</fullName>
+                <default>false</default>
+                <label>PaymentPartiallyCompleted</label>
+            </value>
+            <value>
+                <fullName>PaymentCancel</fullName>
+                <default>false</default>
+                <label>PaymentCancel</label>
+            </value>
+            <value>
+                <fullName>PaymentCompleted</fullName>
+                <default>false</default>
+                <label>PaymentCompleted</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

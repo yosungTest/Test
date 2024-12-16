@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>HQ</fullName>
+        <default>false</default>
+        <label>본사</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>타사</label>
+    </customValue>
+    <description>유형 [GfAmsVendorPurchase__c]</description>
+    <masterLabel>Purchase Vendor Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

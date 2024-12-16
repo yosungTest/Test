@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PurchaseRequestLineItemCompactLayout</fullName>
+    <fields>Name</fields>
+    <fields>PurchaseRequest__c</fields>
+    <fields>PRNumber__c</fields>
+    <fields>ProductGroupLevel1__c</fields>
+    <fields>ProductGroupLevel2__c</fields>
+    <fields>ProductGroupLevel3__c</fields>
+    <fields>ProductCode__c</fields>
+    <fields>ProductName__c</fields>
+    <fields>RequestedBy__c</fields>
+    <fields>RequestedDate__c</fields>
+    <label>PurchaseRequestLineItemCompactLayout</label>
+</CompactLayout>

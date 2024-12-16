@@ -154,6 +154,7 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <label>대리점 매입원장</label>
+    <pluralLabel>Purchase Invoices</pluralLabel>
     <nameField>
         <displayFormat>{00000000}</displayFormat>
         <label>Purchase Invoice Name</label>

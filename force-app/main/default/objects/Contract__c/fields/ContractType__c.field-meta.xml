@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContractType__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Contract Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Purchase_contract</fullName>
+                <default>false</default>
+                <label>Purchase_contract</label>
+            </value>
+            <value>
+                <fullName>Security_Pledge_Contract</fullName>
+                <default>false</default>
+                <label>Security_Pledge_Contract</label>
+            </value>
+            <value>
+                <fullName>UnitPriceContract</fullName>
+                <default>false</default>
+                <label>UnitPriceContract</label>
+            </value>
+            <value>
+                <fullName>Maintenance_Agreement</fullName>
+                <default>false</default>
+                <label>Maintenance_Agreement</label>
+            </value>
+            <value>
+                <fullName>Lease_contract</fullName>
+                <default>false</default>
+                <label>Lease_contract</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

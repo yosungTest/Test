@@ -154,6 +154,7 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <label>AR</label>
+    <pluralLabel>ARs</pluralLabel>
     <nameField>
         <displayFormat>AR{YYYYMMDD}{00000}</displayFormat>
         <label>AR Number</label>
