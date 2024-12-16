@@ -1,0 +1,27 @@
+.my-custom-modal .searchDiv{
+    background-color: violet;
+    z-index: 9002;
+}
+.searchDiv {
+    padding-bottom: 10px;
+}
+
+.customTableDiv{
+    overflow:hidden;
+    overflow-x:auto;
+    overflow-y:auto;
+    max-width: 70vw;
+}
+
+.customTableDiv .customTableTr {
+    height: 5vh;
+}
+
+.customTableNoData {
+    height: 20vh;
+}
+
+.customTableDiv tr th:first-child,
+.customTableDiv tr td:first-child {
+    padding-left: 20px;
+}

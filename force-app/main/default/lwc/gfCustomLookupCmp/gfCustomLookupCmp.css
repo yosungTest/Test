@@ -1,0 +1,70 @@
+.leftPaddingClass {
+    padding-left: 2rem;
+}
+
+.slds-modal__content {
+    overflow: visible;
+}
+
+.uiMenu {
+    position: relative;
+    width: 52px;
+}
+
+.uiMenu .slds-dropdown {
+    margin-left: -25px;
+}
+
+.uiInput-hide-border .slds-input {
+    border: 0px;
+}
+
+.uiMenu-image .slds-icon-text-default {
+    fill: rgb(255,255,255);
+}
+
+.uiMenu-image svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: .25rem;
+    background-color: #7f8de1;
+}
+
+.uiPill-container {
+    background-color: #f3f3f3;
+}
+
+.uiPill-single {
+    width: 100%;
+}
+
+.uiPill-single span.slds-pill__label {
+    width: 100%;
+    padding-left:0.5rem;
+}
+
+ul.slds-dropdown_fluid {
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 99;
+}
+
+.clear-button {
+    cursor: pointer;
+    pointer-events: auto !important;
+}
+
+input[data-required-border=true] {
+    border-color: #d97f88 !important;
+}
+
+.custom-lookup_disabled {
+    background-color: var(--slds-g-color-neutral-base-95, var(--lwc-colorBackgroundInputDisabled, rgb(243, 243, 243)));
+    border-color: var(--slds-g-color-border-base-1, var(--lwc-colorBorderInputDisabled, rgb(201, 201, 201)));
+    color: var(--slds-g-color-neutral-base-50, var(--lwc-colorTextInputDisabled, rgb(68, 68, 68)));
+    cursor: not-allowed;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

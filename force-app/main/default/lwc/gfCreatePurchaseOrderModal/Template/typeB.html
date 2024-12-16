@@ -1,0 +1,192 @@
+<template>
+    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+        <div class="slds-media__figure">
+            <lightning-icon icon-name="standard:document_reference" alternative-text="PurchaseOrder" title="Purchase Order"></lightning-icon>
+        </div>
+        <template if:true={isSpinner}>
+            <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+        </template>
+        <div class="slds-media__body">
+            <h2 class="slds-card__header-title">
+                <span>발주 수정</span>
+            </h2>
+        </div>
+        <div class="slds-no-flex">
+            <lightning-button name="save" class="slds-button" variant="brand" label="Save" onclick={handleClickButton}></lightning-button>
+        </div>
+    </header>
+    <!-- Body -->
+    <div class="slds-box slds-theme_default slds-p-around_medium">
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item class="slds-var-p-right_x-small" flexibility="auto" size="12" small-device-size="12" medium-device-size="12" large-device-size="6">
+                <lightning-input name="orderNumber" type="text" label="발주서 번호" value={orderInfo.orderNumber} onchange={handleChangeInput}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-var-p-left_x-small" flexibility="auto" size="12" small-device-size="12" medium-device-size="12" large-device-size="6">
+                <lightning-input name="purchaseDate" type="Date" label="발주일자" value={orderInfo.purchaseDate} onchange={handleChangeInput}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-var-p-right_x-small" flexibility="auto" size="12" small-device-size="12" medium-device-size="12" large-device-size="6">
+                <lightning-record-picker label="매입거래처"
+                                        name="purchaseVender" 
+                                        placeholder="Search..." 
+                                        object-api-name="VendorPurchase__c"
+                                        onchange={handleRecordPicker} 
+                                        matching-info={recordPickerMatchingInfos.purchaseVenderMatchingInfo} 
+                                        display-info={reocrdPickerDisplayInfos.purchaseVenderDisplayInfo}
+                                        filter={recordPickerfilters.purchaseVenderFilter}
+                                        value={orderInfo.purchaseVender}
+                                        >
+                </lightning-record-picker>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-var-p-left_x-small" flexibility="auto" size="12" small-device-size="12" medium-device-size="12" large-device-size="6">
+                <lightning-record-picker label="발주대리점"
+                                        name="partnerId" 
+                                        placeholder="Search..." 
+                                        object-api-name="Partner__c"
+                                        onchange={handleRecordPicker} 
+                                        matching-info={recordPickerMatchingInfos.partnerMatchingInfo} 
+                                        display-info={reocrdPickerDisplayInfos.partnerDisplayInfo}
+                                        filter={recordPickerfilters.partnerFilter}
+                                        value={orderInfo.partnerId}
+                                        >
+                </lightning-record-picker>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-var-p-right_x-small" flexibility="auto" size="12" small-device-size="12" medium-device-size="12" large-device-size="6">
+                <lightning-input name="requestDate" type="Date" label="배송요청일" value={orderInfo.requestDate} onchange={handleChangeInput}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-var-p-left_x-small" flexibility="auto" size="12" small-device-size="12" medium-device-size="12" large-device-size="6">
+                <lightning-combobox name="orderType" label="배송타입" value={orderInfo.orderType} data-index={index} options={orderType} onchange={handleChangeInput} dropdown-alignment="auto" placeholder="Selected Material"></lightning-combobox>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-var-p-right_x-small" flexibility="auto" size="12" small-device-size="12" medium-device-size="12" large-device-size="6">
+                <lightning-input name="zipCode" type="text" label="우편번호" value={orderInfo.zipCode} onchange={handleChangeInput}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item  class="slds-var-p-left_x-small" flexibility="auto" size="12" small-device-size="12" medium-device-size="12" large-device-size="6">
+                <!--Blank -->
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-var-p-right_x-small" flexibility="auto" size="12" small-device-size="12" medium-device-size="12" large-device-size="6">
+                <lightning-input name="address" type="text" label="배송주소" value={orderInfo.address} onchange={handleChangeInput}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-var-p-left_x-small" flexibility="auto" size="12" small-device-size="12" medium-device-size="12" large-device-size="6">
+                <lightning-input name="addressDetail" type="text" label="주소상세" value={orderInfo.addressDetail} onchange={handleChangeInput}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-var-p-right_x-small" flexibility="auto" size="12" small-device-size="12" medium-device-size="12" large-device-size="6">
+                <lightning-input name="netAmount" type="text" label="발주금액" value={totalAmount} disabled="true"></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-var-p-left_x-small" flexibility="auto" size="12" small-device-size="12" medium-device-size="12" large-device-size="6">
+                <lightning-record-picker label="발주담당자"
+                                        name="registor" 
+                                        placeholder="Search..." 
+                                        object-api-name="User"
+                                        onchange={handleRecordPicker} 
+                                        matching-info={recordPickerMatchingInfos.registorMatchingInfo} 
+                                        display-info={reocrdPickerDisplayInfos.registorDisplayInfo}
+                                        filter={recordPickerfilters.registorFilter}
+                                        value={orderInfo.registor}
+                                        disabled="true"
+                                        >
+                </lightning-record-picker>
+            </lightning-layout-item>
+            <lightning-layout-item flexibility="auto" size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+                <lightning-textarea name="description" label="비고" value={orderInfo.description} onchange={handleChangeInput}></lightning-textarea>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+
+    <section>
+        <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            <div class="slds-media__figure">
+                <lightning-icon icon-name="standard:document_reference" alternative-text="PurchaseOrder" title="Purchase Order"></lightning-icon>
+            </div>
+            <div class="slds-media__body">
+                <h2 class="slds-card__header-title">
+                    <span>발주 목록</span>
+                </h2>
+            </div>
+            <div class="slds-no-flex">
+                <lightning-button class="slds-button" name="search" variant="brand" label="상품추가" onclick={handleClickButton}></lightning-button>
+            </div>
+        </header>
+        <div class="slds-box slds-theme_default slds-p-around_medium">
+            <div class="customTableDiv">
+                <!-- Table -->
+                <!-- <table class="slds-max-medium-table_stacked slds-table slds-table_bordered slds-table_col-bordered customTable"> -->
+                <table class="slds-max-medium-table_stacked slds-table slds-table_bordered customTable">
+                    <!-- thead -->
+                    <thead class="slds-text-heading_small">
+                        <tr class="slds-line-height_reset">
+                            <th class="slds-text-align_center custom_table_delete_head" scope="col">
+                                <div class="slds-truncate" title="Product Code">상품코드</div>
+                            </th>
+                            <th class="slds-text-align_center" scope="col">
+                                <div class="slds-truncate" title="Delete"></div>
+                            </th>
+                            <th class="slds-text-align_center custom_table_head" scope="col">
+                                <div class="slds-truncate" title="Product Name">상품명</div>
+                            </th>
+                            <th class="slds-text-align_center custom_table_head" scope="col">
+                                <div class="slds-truncate" title="Quantity">발주수량</div>
+                            </th>
+                            <th class="slds-text-align_center custom_table_head" scope="col">
+                                <div class="slds-truncate" title="Price">제품가격</div>
+                            </th>
+                            <th class="slds-text-align_center custom_table_head_mini_input" scope="col">
+                                <div class="slds-truncate" title="Total Price">제품총금액</div>
+                            </th>
+                            <th class="slds-text-align_center custom_table_head" scope="col">
+                                <div class="slds-truncate" title="Color">색상</div>
+                            </th>
+                            <th class="slds-text-align_center custom_table_head" scope="col">
+                                <div class="slds-truncate" title="Size">직경</div>
+                            </th>
+                            <th class="slds-text-align_center custom_table_head" scope="col">
+                                <div class="slds-truncate" title="Material">재질</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <!-- tbody -->
+                    <tbody>
+                        <template lwc:if={isOrderItemList} for:each={orderItemList} for:item="item" for:index="index">
+                            <tr class="slds-hint-parent" key={item.index}>
+                                <td data-label="Product Code" class="slds-text-align_center">
+                                    {item.productCode}
+                                </td>
+                                <td data-label="Delete" class="slds-text-align_center">
+                                    <lightning-button-icon name="delete" data-index={index} onclick={handleClickButton} variant="bare" icon-name="utility:delete" alternative-text="Delete" class="slds-m-left_xx-small" title="Delete"></lightning-button-icon>
+                                </td>
+                                <td data-label="Product Code" class="slds-text-align_center">
+                                    <a href={item.productUrl} target="_blank">{item.productName}</a>
+                                </td>
+                                <td data-label="Product Code" class="slds-text-align_center custom_unit_td">
+                                    <lightning-input name="quantity" data-index={index} value={item.quantity} autocomplete="off" type="number" variant="label-hidden" onchange={handleChangeInput}></lightning-input>
+                                </td>
+                                <td data-label="Product Code" class="slds-text-align_center">
+                                    {item.productPrice}
+                                </td>
+                                <td data-label="Total Price" class="slds-text-align_center">
+                                    {item.totalPrice}
+                                </td>
+                                <td data-label="Color" class="slds-text-align_center custom_td_min_width">
+                                    <lightning-combobox name="color" data-index={index} options={colorOptions} value={item.color} onchange={handleChangeInput} dropdown-alignment="auto" variant="label-hidden" placeholder="Selected Color"></lightning-combobox>
+                                </td>
+                                <td data-label="Size" class="slds-text-align_center custom_td_min_width">
+                                    <lightning-combobox name="size" data-index={index} options={sizeOptions} value={item.size} onchange={handleChangeInput} dropdown-alignment="auto" variant="label-hidden" placeholder="Selected Size"></lightning-combobox>
+                                </td>
+                                <td data-label="Material" class="slds-text-align_center custom_td_min_width">
+                                    <lightning-combobox name="material" data-index={index} options={materialOptions} value={item.material} onchange={handleChangeInput} dropdown-alignment="auto" variant="label-hidden" placeholder="Selected Material"></lightning-combobox>
+                                </td>
+                            </tr>
+                        </template>
+                        <template lwc:else>
+                            <tr class="customTableNoData" style="min-height: 10rem;">
+                                <td data-label="Product Code" class="slds-text-align_center" colspan="9">
+                                    No Data
+                                </td>
+                            </tr>
+                        </template>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>  
+
+</template>
