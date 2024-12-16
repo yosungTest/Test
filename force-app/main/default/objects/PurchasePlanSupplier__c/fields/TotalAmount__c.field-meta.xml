@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TotalAmount__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Total Amount</label>
+    <summarizedField>PurchasePlanResult__c.QuotationAmount__c</summarizedField>
+    <summaryFilterItems>
+        <field>PurchasePlanResult__c.IsActive__c</field>
+        <operation>equals</operation>
+        <value>True</value>
+    </summaryFilterItems>
+    <summaryForeignKey>PurchasePlanResult__c.PurchasePlanSupplierId__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StampDutyPayRate__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Stamp Duty Pa Rate</description>
+    <label>Stamp Duty Payment Rate</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Buyer100</fullName>
+                <default>false</default>
+                <label>Buyer 100%</label>
+            </value>
+            <value>
+                <fullName>Supplier100</fullName>
+                <default>false</default>
+                <label>Supplier 100%</label>
+            </value>
+            <value>
+                <fullName>Buyer50Supplier50</fullName>
+                <default>false</default>
+                <label>Buyer 50% Supplier 50%</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

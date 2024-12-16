@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PurchasePlanId__c</fullName>
+    <deprecated>false</deprecated>
+    <label>PurchasePlan</label>
+    <referenceTo>PurchasePlan__c</referenceTo>
+    <relationshipLabel>Purchase Plan Line Item</relationshipLabel>
+    <relationshipName>RFX_LineItem</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

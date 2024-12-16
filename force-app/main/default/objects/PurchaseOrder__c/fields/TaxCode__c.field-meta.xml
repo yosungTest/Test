@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TaxCode__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Tax Code</description>
+    <label>Tax Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PurchaseTaxInvoiceGeneral</fullName>
+                <default>false</default>
+                <label>Purchase: TaxInvoice(General)</label>
+            </value>
+            <value>
+                <fullName>PurchaseTaxInvoiceAsset</fullName>
+                <default>false</default>
+                <label>Purchase: TaxInvoice(Asset)</label>
+            </value>
+            <value>
+                <fullName>PurchaseTaxInvoiceExemption</fullName>
+                <default>false</default>
+                <label>Purchase: TaxInvoice(Exemption)</label>
+            </value>
+            <value>
+                <fullName>PurchaseTaxInvoiceBusiness</fullName>
+                <default>false</default>
+                <label>Purchase: TaxInvoice(Business)</label>
+            </value>
+            <value>
+                <fullName>PurchaseTaxInvoiceEtc</fullName>
+                <default>false</default>
+                <label>Purchase: TaxInvoice(Etc)</label>
+            </value>
+            <value>
+                <fullName>SalesTaxInvoiceGeneral</fullName>
+                <default>false</default>
+                <label>Sales: TaxInvoice(General)</label>
+            </value>
+            <value>
+                <fullName>SalesTaxInvoiceZeroRate</fullName>
+                <default>false</default>
+                <label>Sales: TaxInvoice(ZeroRate)</label>
+            </value>
+            <value>
+                <fullName>SalesBillGeneral</fullName>
+                <default>false</default>
+                <label>Sales: Bill(General)</label>
+            </value>
+            <value>
+                <fullName>SalesIssueExemption</fullName>
+                <default>false</default>
+                <label>Sales: IssueExemption</label>
+            </value>
+            <value>
+                <fullName>SalesSurtax</fullName>
+                <default>false</default>
+                <label>Sales: Surtax</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

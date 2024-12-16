@@ -213,14 +213,14 @@ public with sharing class GfAmsReleaseController {
         if(item != null) {    
             inventoryOutItem.Id          = item.id;
             inventoryOutItem.Quantity__c = item.quantityOrder;
-            inventoryOutItem.QuantityOrder__c  = item.quantity;
+            // inventoryOutItem.QuantityOrder__c  = item.quantity;
             inventoryOutItem.ConfirmQuantityOrder__c  = item.quantityOrder;
             inventoryOutItem.NetPrice__c  = item.netPrice;
-            inventoryOutItem.Product__c  = item.productId;
+            // inventoryOutItem.Product__c  = item.productId;
             // inventoryOutItem.InventoryOutOrder__c = item.id;
-            inventoryOutItem.SkuOption1__c = item.skuOption1;
-            inventoryOutItem.SkuOption2__c = item.skuOption2;
-            inventoryOutItem.SkuOption3__c = item.skuOption3;
+            // inventoryOutItem.SkuOption1__c = item.skuOption1;
+            // inventoryOutItem.SkuOption2__c = item.skuOption2;
+            // inventoryOutItem.SkuOption3__c = item.skuOption3;
         }
         return inventoryOutItem;
     }

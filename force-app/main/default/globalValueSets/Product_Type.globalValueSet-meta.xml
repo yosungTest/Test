@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>General</fullName>
+        <default>false</default>
+        <label>일반상품</label>
+    </customValue>
+    <customValue>
+        <fullName>Refrigerated</fullName>
+        <default>false</default>
+        <label>냉장상품</label>
+    </customValue>
+    <customValue>
+        <fullName>Frozen</fullName>
+        <default>false</default>
+        <label>냉동상품</label>
+    </customValue>
+    <description>General;Refrigerated Frozen;</description>
+    <masterLabel>Product Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

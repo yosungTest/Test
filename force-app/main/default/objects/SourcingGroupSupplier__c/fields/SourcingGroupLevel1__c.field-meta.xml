@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SourcingGroupLevel1__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <label>Sourcing Group Level1</label>
+    <referenceTo>SourcingGroup__c</referenceTo>
+    <relationshipLabel>Sourcing Group Suppier</relationshipLabel>
+    <relationshipName>SourcingGroupm19K</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

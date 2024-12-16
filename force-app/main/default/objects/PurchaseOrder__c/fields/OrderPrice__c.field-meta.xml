@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OrderPrice__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Order Price</description>
+    <label>Order Price</label>
+    <summarizedField>PurchaseOrderLineItem__c.TotalAmount__c</summarizedField>
+    <summaryForeignKey>PurchaseOrderLineItem__c.PurchaseOrder__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

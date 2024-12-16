@@ -8,6 +8,11 @@
     },
     "mobileSettings": {
       "enableS1EncryptedStoragePref2": false
+    },
+    "profileSettings": {
+      "defaultUserPermissions": {
+          "editReadOnlyFields": true
+      }
     }
   }
 }

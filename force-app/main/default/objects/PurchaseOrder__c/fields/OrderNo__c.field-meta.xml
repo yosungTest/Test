@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OrderNo__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Order No</description>
+    <displayFormat>PO{YYYY}{MM}{DD}{0000}</displayFormat>
+    <externalId>false</externalId>
+    <label>Order No</label>
+    <trackTrending>false</trackTrending>
+    <type>AutoNumber</type>
+</CustomField>

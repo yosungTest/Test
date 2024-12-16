@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InspectionMethod__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Inspection Method</description>
+    <label>Inspection Method</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OutsideInspection</fullName>
+                <default>false</default>
+                <label>Outside Inspection</label>
+            </value>
+            <value>
+                <fullName>PackageInspection</fullName>
+                <default>false</default>
+                <label>Package Inspection</label>
+            </value>
+            <value>
+                <fullName>TestCertificate</fullName>
+                <default>false</default>
+                <label>Test Certificate</label>
+            </value>
+            <value>
+                <fullName>QuantityInspection</fullName>
+                <default>false</default>
+                <label>Quantity Inspection</label>
+            </value>
+            <value>
+                <fullName>NoInspection</fullName>
+                <default>false</default>
+                <label>No Inspection</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Korea</fullName>
+        <default>true</default>
+        <label>Korea</label>
+    </customValue>
+    <customValue>
+        <fullName>English</fullName>
+        <default>false</default>
+        <label>English</label>
+    </customValue>
+    <description>Language (Global Picklist)    [GfAmsCommonCode__c]</description>
+    <masterLabel>Language</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
