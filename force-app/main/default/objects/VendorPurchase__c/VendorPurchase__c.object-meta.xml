@@ -154,6 +154,7 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <label>매입거래처</label>
+    <pluralLabel>Purchase Vendors</pluralLabel>
     <nameField>
         <label>Purchase Vendor Name</label>
         <type>Text</type>

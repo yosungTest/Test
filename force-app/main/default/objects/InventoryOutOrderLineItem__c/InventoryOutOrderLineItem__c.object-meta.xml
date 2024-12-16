@@ -154,6 +154,7 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <label>본사출고상세</label>
+    <pluralLabel>Inventory Out Order Line Items</pluralLabel>
     <nameField>
         <displayFormat>{0000000000}</displayFormat>
         <label>Name</label>

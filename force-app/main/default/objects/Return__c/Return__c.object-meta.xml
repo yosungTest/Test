@@ -154,6 +154,7 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <label>본사반품</label>
+    <pluralLabel>Returns</pluralLabel>
     <nameField>
         <label>Return No</label>
         <type>Text</type>

@@ -154,6 +154,7 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <label>대리점</label>
+    <pluralLabel>Partners</pluralLabel>
     <nameField>
         <label>Partner Name</label>
         <type>Text</type>

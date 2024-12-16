@@ -155,6 +155,10 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <label>Sourcing Group</label>
+<<<<<<< HEAD
+=======
+    <pluralLabel>Sourcing Groups</pluralLabel>
+>>>>>>> 4bc27c50ac72e7ec6555a74cbad4ad923199e768
     <nameField>
         <label>SourcingGroup Name</label>
         <trackFeedHistory>false</trackFeedHistory>

@@ -155,6 +155,10 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <label>Supplier Contract</label>
+<<<<<<< HEAD
+=======
+    <pluralLabel>Supplier Contracts</pluralLabel>
+>>>>>>> 4bc27c50ac72e7ec6555a74cbad4ad923199e768
     <nameField>
         <label>Contract Name</label>
         <type>Text</type>

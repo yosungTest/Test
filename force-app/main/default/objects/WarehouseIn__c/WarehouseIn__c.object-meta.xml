@@ -154,6 +154,7 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <label>대리점입고</label>
+    <pluralLabel>Warehouse Ins</pluralLabel>
     <nameField>
         <label>Warehousing No</label>
         <type>Text</type>

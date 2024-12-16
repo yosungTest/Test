@@ -1,6 +1,7 @@
 {
-  "orgName": "Demo company",
+  "orgName": "TestScratch",
   "edition": "Developer",
+  "language" : "en_US",
   "features": ["EnableSetPasswordInApi"],
   "settings": {
     "lightningExperienceSettings": {
@@ -9,10 +10,18 @@
     "mobileSettings": {
       "enableS1EncryptedStoragePref2": false
     },
+<<<<<<< HEAD
     "profileSettings": {
       "defaultUserPermissions": {
           "editReadOnlyFields": true
       }
+=======
+    "ApexSettings": {
+      "enableApexApprovalLockUnlock" : true
+    },
+    "languageSettings" : {
+      "enableTranslationWorkbench" : true
+>>>>>>> 4bc27c50ac72e7ec6555a74cbad4ad923199e768
     }
   }
 }
