@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="상품 목록">
+        <div class="search-container">
+            <lightning-input 
+                type="text" 
+                placeholder="상품코드,상품이름 입력" 
+                onchange={handleSearchInputChange}>
+            </lightning-input>
+            <lightning-button 
+                label="검색" 
+                variant="brand" 
+                onclick={handleSearch}>
+            </lightning-button>
+        </div>
+        <div class="grid-container"></div>
+        <lightning-button 
+            label="선택" 
+            onclick={handleSelect}>
+        </lightning-button>
+    </lightning-card>
+</template>

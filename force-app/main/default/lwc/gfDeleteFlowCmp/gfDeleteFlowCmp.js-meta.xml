@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+        <apiVersion>62.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>gfDeleteFlowCmp</masterLabel>
+    <description>gfDeleteFlowCmp</description>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="objectName" label="objectName" type="String" />
+            <property name="selectedIds" label="selectedIds" type="String" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

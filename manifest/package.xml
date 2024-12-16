@@ -4,7 +4,7 @@
         <members>*</members>
         <name>ApexClass</name>
     </types>
-    <types>
+    <!--<types>
         <members>*</members>
         <name>ApexComponent</name>
     </types>
@@ -70,10 +70,18 @@
     <types>
         <members>*</members>
         <name>FlexiPage</name>
+<<<<<<< HEAD
     </types>-->
     <types>
         <members>*</members>
         <name>Flow</name>
     </types>
+=======
+    </types>
+    <types>
+        <members>*</members>
+        <name>Flow</name>
+    </types>-->
+>>>>>>> 32d6670834295b662005e7e454fda2f33c67a609
     <version>62.0</version>
 </Package>

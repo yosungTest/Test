@@ -155,7 +155,10 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <label>품목군</label>
+<<<<<<< HEAD
+=======
     <pluralLabel>Product Groups</pluralLabel>
+>>>>>>> 4bc27c50ac72e7ec6555a74cbad4ad923199e768
     <nameField>
         <label>Product Name</label>
         <type>Text</type>

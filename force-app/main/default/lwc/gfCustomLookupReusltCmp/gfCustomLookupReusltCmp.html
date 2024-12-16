@@ -1,0 +1,51 @@
+<!--
+  @description       : 
+  @author            : yoseong.kang@dkbmc.com
+  @group             : 
+  @last modified on  : 2024-10-28
+  @last modified by  : yoseong.kang@dkbmc.com
+  Modifications Log
+  Ver   Date         Author                   Modification
+  1.0   2024-10-16   yoseong.kang@dkbmc.com   Initial Version
+-->
+<template>
+    <!-- Group -->
+	<template lwc:if={record.isFirstGroupItem}>
+		<li role="presentation" class="slds-listbox__item">
+			<div class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="presentation">
+				<h3 class="slds-listbox__option-header" role="presentation">{groupValue}</h3>
+			</div>
+		</li> 
+	</template>
+
+	<li role="presentation" class="slds-listbox__item" onclick={selectRecord} data-is-selected={record.isSelected}>
+		<span id="listbox-option" data-optionlist 
+				class="slds-media slds-listbox__option slds-listbox__option_entity" role="option" 
+				data-focused={record.isFocused}
+				aria-disabled={record.isSelected}>
+			<template lwc:if={hideIcon}>
+				<span class="slds-media_small slds-media__figure">
+				</span>
+			</template>
+
+			<template lwc:else>
+				<span class="slds-media__figure">
+					<span class="slds-media__figure slds-listbox__option-icon slds-icon_container" title="record's icon">
+						<lightning-icon icon-name={iconName} class={iconStyleClass} size="small" alternative-text="icon"></lightning-icon>
+					</span>
+				</span> 
+			</template>
+
+			<span class="slds-media__body">  
+				<span class="slds-listbox__option-text slds-listbox__option-text_entity">
+					<template lwc:if={groupField}>{groupValue} - </template>
+					{record.Name}
+				</span>
+
+				<template if:true={hasMeta}>
+					<span class="slds-listbox__option-text slds-listbox__option-text_entity">{additionalData}</span>
+				</template>
+			</span>
+		</span>
+	</li>
+</template>

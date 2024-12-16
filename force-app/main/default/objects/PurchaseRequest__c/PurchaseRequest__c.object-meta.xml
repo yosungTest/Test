@@ -155,7 +155,10 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <label>Purchase Request</label>
+<<<<<<< HEAD
+=======
     <pluralLabel>Purchase Requests</pluralLabel>
+>>>>>>> 4bc27c50ac72e7ec6555a74cbad4ad923199e768
     <nameField>
         <label>Purchase Request Name</label>
         <trackFeedHistory>false</trackFeedHistory>

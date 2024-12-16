@@ -1,0 +1,206 @@
+<!--
+  @description       : 
+  @author            : mingyoon.woo 
+  @group             : 
+  @last modified on  : 2024-12-04
+  @last modified by  : yoseong.kang@dkbmc.com
+  Modifications Log 
+  Ver   Date         Author                             Modification
+  1.0   2021-06-30   mingyoon.woo    					Initial Version
+  1.1   2021-10-14   hyojinn.lee     					data-lookup-pill 내의 input disabled attribute 추가, disabled 인 경우 삭제 아이콘 숨기기
+-->
+<template>
+	<!-- UI Body --> 
+	<div id="searchResult" data-custom-lookup class={searchClass} >
+
+		<div class="slds-form-element__control">
+			<div class="uiInput uiInput--default">
+				<!-- [S] Field Label-->
+				<template if:true={label}>
+					<label class="slds-form-element__label" for="lookupField">
+						<template if:true={required}>
+							<abbr class="slds-required" title="required">*</abbr>
+						</template>
+						{label}
+					</label>
+				</template>
+				<!-- [E] Field Label-->
+				
+				<!-- [S] lookup field content-->
+				<div >
+					<!--This part is for display search bar for lookup--> 
+					<template if:false={enableMultiObject}>
+						<!-- Single Object Selection Type -->
+						<div data-lookup-field class={lookupFieldClass1}>
+							<span class="slds-icon_container slds-combobox__input-entity-icon" title="record">
+								<lightning-icon class="slds-icon slds-icon_small" icon-name={iconName} size="small" alternative-text="icon"></lightning-icon>
+								<span class="slds-assistive-text"></span>
+							</span>
+
+							<input type="text" data-search-input
+									class="slds-input slds-lookup__search-input leftPaddingClass" 
+									onmousedown={handleFocus}
+									onblur={handleBlur} 
+									onkeydown={handleKeyDown} 
+									onkeyup={handleChange} 
+									placeholder={placeholder} 
+									disabled={disabled}
+									data-required-border={requiredBorder}
+							/>
+							<template lwc:if={showSpinner}>
+								<div class="slds-input__icon-group slds-input__icon-group_right">
+									<div role="status" class="slds-spinner slds-spinner_brand slds-spinner_x-small slds-input__spinner">
+										<span class="slds-assistive-text">Loading</span>
+										<div class="slds-spinner__dot-a"></div>
+										<div class="slds-spinner__dot-b"></div>
+									</div>
+								</div>
+							</template>
+							<lightning-icon class="slds-input__icon slds-show" icon-name="utility:search" size="x-small" alternative-text="search"></lightning-icon>
+						</div>	
+					</template>
+					<template if:true={enableMultiObject}>
+						<!-- Group -->
+						<div data-lookup-field class={lookupFieldClass2} >
+							<div class="slds-grid slds-grid_vertical-align-center uiInput-hide-border">
+								<div class="slds-p-left--xxx-small uiMenu slds-float--left">
+									<lightning-icon class="slds-icon slds-icon_small" size="small" icon-name={iconName} alternative-text="icon"></lightning-icon>
+									<lightning-button-menu id="buttonMenu" variant="container" icon-size="x-small" alternative-text="Show menu" class="groupBox" onselect={objectSelect}>
+										<template for:each={multiObjectList} for:item="obj" >
+											<lightning-menu-item key={obj.value} value={obj.value} label={obj.label} prefix-icon-name={obj.iconName} ></lightning-menu-item>
+										</template>
+									</lightning-button-menu>
+								</div>
+
+								<input type="text" data-search-input 
+										class="slds-input slds-lookup__search-input"
+										onfocus={handleFocus} 
+										onblur={handleBlur} 
+										onchange={handleChange} 
+										placeholder={placeholder}
+										disabled={disabled} 
+										data-required-border={requiredBorder}
+								/>
+								<template lwc:if={showSpinner}>
+									<div class="slds-input__icon-group slds-input__icon-group_right">
+										<div role="status" class="slds-spinner slds-spinner_brand slds-spinner_x-small slds-input__spinner">
+											<span class="slds-assistive-text">Loading</span>
+											<div class="slds-spinner__dot-a"></div>
+											<div class="slds-spinner__dot-b"></div>
+										</div>
+									</div>
+								</template>
+								<lightning-icon class="slds-input__icon slds-show" icon-name="utility:search" size="x-small" alternative-text="search"></lightning-icon>
+							</div>
+						</div>
+					</template>
+
+                    <!-- pill container for store selected record(s) -->                    
+                    <template if:true={enableMultiRecord}>
+                        <template if:true={hasSelectedRecords}>
+                            <div class="slds-pill_container uiPill-container">
+                                <ul class="slds-listbox slds-listbox_horizontal" role="listbox">
+									<template for:each={selectedRecords} for:item="record" >
+                                        <li key={record.Id} class="slds-listbox-item" >
+                                            <!-- Can not use lightning:pill, it could not get event source when onremove fired -->
+											<template lwc:if={disabled}>
+												<div class="slds-pill custom-lookup_disabled" role="option" tabindex="0" aria-selected="true">
+													<span class="slds-pill__label" title={record.Name}> 
+														<template if:true={isUsingGroupField}>{record.ParentCode2__c__l} - </template>
+														{record.Name} 
+													</span>
+												</div>
+											</template>
+											<template lwc:else>
+												<div class="slds-pill" role="option" tabindex="0" aria-selected="true">
+													<span class="slds-pill__label" title={record.Name}> 
+														<template if:true={isUsingGroupField}>{record.ParentCode2__c__l} - </template>
+														{record.Name}
+													</span>
+													<div class="slds-button slds-button--icon slds-pill__remove" data-item-id={record.Id} onclick={clear} style="cursor:pointer;">
+														<lightning-icon class="slds-button__icon" icon-name="utility:close" size="x-small" alternative-text="remove"></lightning-icon>  
+														<span class="slds-assistive-text">Remove</span>
+													</div>
+												</div>
+											</template>
+                                        </li>
+									</template>
+                                </ul>
+                            </div>                            
+                        </template>
+                    </template>
+
+					<template if:false={enableMultiRecord}>
+						<div data-lookup-pill class={lookupPillClass}>
+							<div class="slds-combobox_container">
+								<div class="slds-combobox" role="combobox" >
+									<div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left-right" role="none">
+										<lightning-icon icon-name={iconName} size="x-small" class="slds-combobox__input-entity-icon"></lightning-icon>
+										<input  type="text" readonly="readonly" disabled={disabled} value={selectedRecord.Name}
+												data-required-border={requiredBorder}
+												class="slds-input slds-combobox__input slds-combobox__input-value"/>
+											<template if:false={disabled}>
+												<div class="slds-show slds-input__icon slds-input__icon_right clear-button" onclick={clear}>
+													<lightning-icon icon-name="utility:close" size="x-small" alternative-text="remove"></lightning-icon>
+												</div>
+											</template>
+									</div>
+								</div>
+							</div>
+						</div>
+                    </template>
+					
+				</div>
+				<!-- [E] lookup field content-->
+			</div>
+		</div>
+
+		<!-- [S] Display Query Result List-->
+		<!-- <template lwc:if={isDropdownOpen}> -->
+			<!-- Dropdown -->
+			<ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-lookup__menu" 
+				role="listbox"
+				onscroll={doScroll}
+				onmousedown={handleResultBarClick}
+				>
+				<div style="width:100%;text-align:center;">{message}</div>				
+				<template for:each={tempSearchRecords} for:item="record" >
+					<c-gf-custom-lookup-reuslt-cmp
+						key={record.Id} 
+						record={record} 
+						icon-name={iconName} 
+						additional-fields={additionalDisplays}
+						onselect={recordSelectedEventHandler} 
+						onmousedown={handleResultMouseDown}
+						group-field={groupField}
+						hide-icon={hideIcon}
+						data-is-selected={record.isSelected}
+						data-focused={record.isFocused}
+						>
+					</c-gf-custom-lookup-reuslt-cmp>
+				</template>
+	
+				<!-- [S] Add sObject Button -->
+				<template if:true={enableNewRecord}>
+					<li role="presentation" class="slds-listbox__item" onclick={createNewRecord} >
+						<span id="listbox-option-unique-id" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+							<span class="slds-media__figure">
+								<span class="slds-icon_container" title="Plus symbol icon">
+									<lightning-icon icon-name="utility:add" class="slds-icon slds-icon_xx-small" size="xx-small" alternative-text="icon"></lightning-icon>
+									<span class="slds-assistive-text">Plus symbol icon</span>
+								</span>
+							</span>	  
+							<span class="slds-media__figure">
+								<span class="slds-listbox__option-text slds-listbox__option-text_entity">Add New {objectLabel}</span>
+							</span>			 
+						</span>
+					</li>
+				</template>
+				<!-- [E] Add sObject Button -->
+			</ul>
+			<!-- Dropdown -->
+		<!-- </template> -->
+		<!-- [E] Display Query Result List-->
+
+	</div>
+</template>

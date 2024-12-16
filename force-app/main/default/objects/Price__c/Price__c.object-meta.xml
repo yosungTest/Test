@@ -155,7 +155,10 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <label>Price</label>
+<<<<<<< HEAD
+=======
     <pluralLabel>Prices</pluralLabel>
+>>>>>>> 4bc27c50ac72e7ec6555a74cbad4ad923199e768
     <nameField>
         <displayFormat>P-{0000}</displayFormat>
         <label>Price Name</label>

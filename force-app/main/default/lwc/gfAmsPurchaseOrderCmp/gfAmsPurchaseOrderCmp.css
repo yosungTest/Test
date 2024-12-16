@@ -1,0 +1,6 @@
+.custom-grid .tui-grid-cell {
+    z-index: 1000 !important; /* 드롭다운의 z-index가 낮을 경우 강제로 높임 */
+}
+.custom-grid .tui-grid-layer-editing {
+    overflow: visible !important; /* 편집 레이어가 잘리지 않도록 처리 */
+}

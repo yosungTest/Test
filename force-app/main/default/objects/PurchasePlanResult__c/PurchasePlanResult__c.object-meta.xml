@@ -155,7 +155,10 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <label>Purchase Plan Result</label>
+<<<<<<< HEAD
+=======
     <pluralLabel>Purchase Plan Results</pluralLabel>
+>>>>>>> 4bc27c50ac72e7ec6555a74cbad4ad923199e768
     <nameField>
         <displayFormat>PR{YY}{MM}{DD}{0000}</displayFormat>
         <label>PP Result Name</label>

@@ -155,7 +155,10 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <label>Sourcing Group Supplier</label>
+<<<<<<< HEAD
+=======
     <pluralLabel>Sourcing Group Suppliers</pluralLabel>
+>>>>>>> 4bc27c50ac72e7ec6555a74cbad4ad923199e768
     <nameField>
         <displayFormat>SS{YY}{MM}{DD}{0000}</displayFormat>
         <label>Sourcing Group Supplier Name</label>

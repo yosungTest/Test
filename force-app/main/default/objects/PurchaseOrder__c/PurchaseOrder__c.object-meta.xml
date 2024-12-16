@@ -155,7 +155,10 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <label>본사발주</label>
+<<<<<<< HEAD
+=======
     <pluralLabel>Purchase Orders</pluralLabel>
+>>>>>>> 4bc27c50ac72e7ec6555a74cbad4ad923199e768
     <nameField>
         <label>Purchase Order Name</label>
         <trackFeedHistory>false</trackFeedHistory>
@@ -163,9 +166,15 @@
     </nameField>
     <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
     <searchLayouts>
+<<<<<<< HEAD
+        <searchResultsAdditionalFields>OrderType__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields xsi:nil></searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+=======
         <!-- <searchResultsAdditionalFields>OrderType__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields xsi:nil></searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields> -->
+>>>>>>> 4bc27c50ac72e7ec6555a74cbad4ad923199e768
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>

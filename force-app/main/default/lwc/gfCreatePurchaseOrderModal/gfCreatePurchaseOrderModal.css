@@ -1,0 +1,36 @@
+:host {
+    --lwc-modal-max-width: 80vw; /* Adjust the max-width */
+    --lwc-modal-max-height: 80vh; /* Adjust the max-height */
+    --lwc-modal-container-max-width: 50rem; /* Adjust the container width */
+}
+
+header {
+    padding-bottom: 12px;
+}
+
+section>header {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.customTableDiv{
+    overflow:hidden;
+    overflow-x:auto;
+}
+
+.customTableDiv table th {
+    color: var(--slds-g-color-neutral-base-30, var(--lwc-colorTextLabel, rgb(68, 68, 68)));
+    font-size: 0.75em;
+}
+
+.customTableDiv table .custom_table_head {
+    min-width: 5rem;
+}
+
+.custom_table_delete_head {
+    padding-left: 0.5rem;
+}
+
+.customTableNoData {
+    height: 10rem;
+}

@@ -1,0 +1,8 @@
+[data-optionlist][aria-disabled=true] {
+    color: #c0c0c0 !important;
+}
+
+[data-optionlist][data-focused=true] {
+    background-color: var(--slds-g-color-neutral-base-95, var(--lwc-colorBackgroundRowHover, rgb(243, 243, 243)));
+    text-decoration: none;
+}
